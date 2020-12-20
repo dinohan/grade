@@ -1,4 +1,4 @@
-# Movie app
+# 성적 확인기
 
 React study
 
