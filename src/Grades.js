@@ -11,15 +11,15 @@ function Grades({ id, title, grade, professor, score }) {
             <div className="higher class_grade">
                 {grade}
             </div>
-        </div>
-        <div>
-            <div className="lower professor">
-                {professor}
-            </div>
-            <div className="lower class_score">
-                {score}
-            </div>
-        </div>
+        </div>{
+            <div>
+                <div className="lower professor">
+                    {professor}
+                </div>
+                <div className="lower class_score">
+                    {score}
+                </div>
+            </div>}
     </div >
 }
 

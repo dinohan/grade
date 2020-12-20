@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Grades from './Grades';
 import './App.css';
+import * as config from './config';
 
 class App extends React.Component {
   state = {
@@ -9,9 +10,11 @@ class App extends React.Component {
     avg: 0,
     class_list: []
   };
+
   getGrades = async () => {
     this.setState({ isLoading: true });
-    const { data: { avg, class_list } } = await axios.get('http://192.168.0.6:5000/api/dinohan');
+    const link = 'http://192.168.0.6:5000/api?id=' + config.ID + '&pw=' + config.PW;
+    const { data: { avg, class_list } } = await axios.get(link);
     this.setState({ avg: avg, class_list: class_list, isLoading: false });
   }
 
