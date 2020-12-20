@@ -1,25 +1,49 @@
-import logo from './logo.svg';
+import React from 'react';
+import axios from 'axios';
+import Grades from './Grades';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    isLoading: true,
+    avg: 0,
+    class_list: []
+  };
+  getGrades = async () => {
+    this.setState({ isLoading: true });
+    const { data: { avg, class_list } } = await axios.get('http://192.168.0.6:5000/api/dinohan');
+    this.setState({ avg: avg, class_list: class_list, isLoading: false });
+  }
+
+  componentDidMount() {
+    this.getGrades();
+  }
+  render() {
+    const { isLoading, avg, class_list } = this.state;
+    return (
+      <div>
+        <div id="top">
+          <div id="avg_box">
+            <p>평균학점:</p> <p id="avg_score">{avg}</p>
+          </div>
+        </div>
+        {
+          class_list.map(element => {
+            return <Grades
+              key={element.id}
+              id={element.id}
+              title={element.title}
+              grade={element.grade}
+              professor={element.professor}
+              score={element.score} />
+          })
+        }
+        <div id="bottom">
+          <button id="refresh" onClick={this.getGrades}>{isLoading ? 'Loading...' : 'Refresh'}</button>
+        </div>
+      </div >
+    )
+  }
 }
 
 export default App;
