@@ -51,7 +51,7 @@ axios로 불러오는 api 내용
             professor: "강아람"
         },
         {
-           id: "21506795",
+            id: "21506795",
             year: "2020학년도",
             semester: "2 학기",
             title: "생명정보과학",
