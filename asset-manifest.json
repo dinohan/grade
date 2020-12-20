@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/grade/static/css/main.12979b64.chunk.css",
-    "main.js": "/grade/static/js/main.78755658.chunk.js",
-    "main.js.map": "/grade/static/js/main.78755658.chunk.js.map",
+    "main.js": "/grade/static/js/main.3d0b7161.chunk.js",
+    "main.js.map": "/grade/static/js/main.3d0b7161.chunk.js.map",
     "runtime-main.js": "/grade/static/js/runtime-main.d0ba9d99.js",
     "runtime-main.js.map": "/grade/static/js/runtime-main.d0ba9d99.js.map",
-    "static/js/2.0ded6971.chunk.js": "/grade/static/js/2.0ded6971.chunk.js",
-    "static/js/2.0ded6971.chunk.js.map": "/grade/static/js/2.0ded6971.chunk.js.map",
+    "static/js/2.ff174468.chunk.js": "/grade/static/js/2.ff174468.chunk.js",
+    "static/js/2.ff174468.chunk.js.map": "/grade/static/js/2.ff174468.chunk.js.map",
     "index.html": "/grade/index.html",
     "static/css/main.12979b64.chunk.css.map": "/grade/static/css/main.12979b64.chunk.css.map",
-    "static/js/2.0ded6971.chunk.js.LICENSE.txt": "/grade/static/js/2.0ded6971.chunk.js.LICENSE.txt"
+    "static/js/2.ff174468.chunk.js.LICENSE.txt": "/grade/static/js/2.ff174468.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d0ba9d99.js",
-    "static/js/2.0ded6971.chunk.js",
+    "static/js/2.ff174468.chunk.js",
     "static/css/main.12979b64.chunk.css",
-    "static/js/main.78755658.chunk.js"
+    "static/js/main.3d0b7161.chunk.js"
   ]
 }
